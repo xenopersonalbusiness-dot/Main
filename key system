@@ -25,7 +25,7 @@ local function sendLog(title, extraFields)
     local fields = {
         { name = "User", value = string.format("%s (%s)", player.Name, player.UserId), inline = false },
         { name = "Executor", value = getExecName(), inline = true },
-        { name = "Place", value = tostring(game.PlaceId), inline = true },
+        { name = "Place", value = string.format("%s (%s)", game.Name, tostring(game.PlaceId)), inline = true },
     }
     if extraFields then
         for _, f in ipairs(extraFields) do
